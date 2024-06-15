@@ -1,7 +1,6 @@
 - 👋 Hi, I’m maryam
 - 👀 I’m interested in coding
-- 🌱 I’m currently learning java , C++ and MySQL  
-- 💞️ I’m looking to collaborate on ...
+- 🌱 I’m currently learning java , C++ , python and SQL   
 - 📫 How to reach me (email)maryam82prh@gmail.com
 
 <!---
