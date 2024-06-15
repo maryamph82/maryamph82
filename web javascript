@@ -1,0 +1,117 @@
+/*
+var users = ['ali' , 'mahdi' , 'hasan' , 'babak' , 'amin']
+
+var userindex = users.findIndex(function(user) {
+    return user == 'hasan';
+})
+
+console.log(userindex)
+*/
+
+/*
+var machins = ['benz' , 'lexos' , 'supra' , 'peykan'];
+
+
+alert(machins.findIndex(checksupra))
+
+function checksupra(machin){
+    return machin === 'supra';
+}
+
+*/
+
+//try 1 
+
+/*
+
+var Store_products = ['mouse', 'manitor', 'keybord'];
+// تعریف آرایه
+
+document.getElementById("delet-button").onclick = function () {
+// اگر کلیک شد فانکشن اجرا شود
+    var delet = prompt("چه چیزی میخواهی حذف کنی؟؟")
+    // DELET = چیزی که کاربر میخواهد حذف کند
+    var index = Store_products.findIndex(checkfordel);
+    
+    function checkfordel(del){
+        return del == "mahdi";
+    }
+
+    alert(index)
+    if (index !== -1) {
+        // در اینجا یعنی اگر وجود داشت
+        alert("محصول " + delet + "از لیست حذف شد.")
+        Store_products.splice(delet)
+    }
+    else{
+        alert("محصول " + delet + "در لیست یافت نشد.")
+    }
+
+    function checkfordel(delet){
+        return Store_products.includes(delet);
+    }
+}
+document.getElementById("add-button").onclick = function () {
+    var pushing = prompt("چه چیزی میخواهی اضافه کنی؟؟")
+    Store_products.push(pushing)
+    console.log(" محصول " + pushing + "به لیست اضافه شد")
+}
+*/
+
+//try 2 
+
+var Store_products = ["mouse", "manitor", "keybord"];
+// تعریف آرایه
+var index;
+var useradd;
+var Delet_product
+
+function menu(){
+
+    var choose = prompt(" 1)add a new product \n 2)delet a product ")
+    
+    if(choose==1){
+        addNew();
+    }
+
+    else if(choose ==2){
+        delet();
+    }
+
+    else{
+        alert("invalid input")
+        menu();
+    }
+
+}
+menu() ; 
+
+function addNew(){
+    var New_product = prompt("enter product name : ") ; 
+    Store_products.push(New_product);  
+    alert("add product successfully!")
+    Display_all_product(); 
+}
+
+function delet(){
+ Delet_product = prompt("enter product name for delet : ") ; 
+var index = Store_products.findIndex(Index_delete);
+console.log(index);
+delete Store_products[index];
+alert("delet product successfully")
+Display_all_product(); 
+}
+
+function Display_all_product(){
+    for(let i = 0 ;i<Store_products.length ; i++ ){
+        alert(Store_products[i]) ; 
+    }
+}
+
+function Index_delete(jash){
+
+    if(Delet_product==jash){
+return jash ;  
+}
+}
+
